@@ -1,21 +1,86 @@
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mostaza - Hamburguesas con M mayúscula</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="menu.html">Menú</a></li>
-            <li><a href="Nosotros.html">Nosotros</a></li>
-        </ul>
-    </nav>
-</header>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSw4Na2IGBecEU9KBGsdo2ZJQf-wGa9iyMMXMT1rAIAr4T8Zhoxjic3C68ipVQ8cg9vJs&usqp=CAU" alt="">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburguesa</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menu container">
+        <img class="logo-1" src="images/logo.svg" alt="" />
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+          <img src="images/menu.png" class="menu-icono" alt="" />
+        </label>
+        <nav class="navbar">
+          <div class="menu-1">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Productos</a></li>
+            </ul>
+          </div>
+          <img class="logo-2" src="imagen/logo.svg" alt="" />
+          <div class="menu-2">
+            <ul>
+              <li><a href="#">Horario</a></li>
+            </ul>
+            <div class="socials">
+              <a href="#">
+                <div class="social">
+                  <img src="images/s1.svg" alt="" />
+                </div>
+              </a>
+              <a href="#">
+                <div class="social">
+                  <img src="images/s2.svg" alt="" />
+                </div>
+              </a>
+              <a href="#">
+                <div class="social">
+                  <img src="images/s3.svg" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
 
+      <div class="header-content container">
+        <div class="swiper mySwiper-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slaider">
+                <div class="slider-text">
+                  <h1>Hamburguesa</h1>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem assumenda totam neque, voluptatibus nihil
+                    beatae nesciunt id ipsum asperiores alias
+                  </p>
+                  <div class="botones">
+                    <a href="#" class="btn-1">Comprar</a>
+                    <a href="#" class="btn-1">Menu</a>
+                  </div>
+                </div>
+                <div class="slider-imag">
+                    <img src="images/slider1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-</body>
+    <script src="https://cdn.jsdelvr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
 </html>
