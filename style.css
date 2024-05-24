@@ -36,7 +36,7 @@ body {
     opacity: 1;
 }
 .swiper-pagination-bullet-active {
-    blackground-color: #db2418
+    background-color: #db2418;
 }
 
 .menu {
