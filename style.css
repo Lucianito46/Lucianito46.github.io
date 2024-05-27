@@ -723,5 +723,17 @@ body {
         right: -50px;
       }
     }
-    
+    .btn-volver {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #db2418;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn-volver:hover {
+        background-color: #b71c15;
+      }          
   
