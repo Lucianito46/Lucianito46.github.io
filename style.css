@@ -508,4 +508,103 @@ display: flex;
     .links h4{
         margin: 25px 0px 10px 0px;
     }
+    .contacto {
+        padding: 50px 0;
+        background-color: #0d0d0d;
+        color: #fff;
+      }
+      
+      .contacto .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      .contacto h2 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .contacto form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .contacto label {
+        margin-top: 10px;
+      }
+      
+      .contacto input, .contacto select, .contacto textarea {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+      
+      .contacto button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #db2418;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      
+      .contacto button:hover {
+        background-color: #b71c15;
+      }
+      
+      .error {
+        color: #db2418;
+        font-size: 0.9em;
+      }
+
+/* Estilo para el carrusel de fotos */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0d0d0d;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .carousel img {
+    max-width: 600px;
+    max-height: 400px;
+    border-radius: 10px;
+  }
+  
+  .carousel-button {
+    background-color: #db2418;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+  }
+  
+  .carousel-button:hover {
+    background-color: #b71c15;
+  }
+  
+  #prevButton {
+    position: absolute;
+    left: -50px;
+  }
+  
+  #nextButton {
+    position: absolute;
+    right: -50px;
+  }
+  
 }
