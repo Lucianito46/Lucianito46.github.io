@@ -44,75 +44,75 @@ tabInputs.forEach(function(input){
     });
 });
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
+document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    
-    let valid = true;
+    let isValid = true;
 
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const subject = document.getElementById('subject');
-    const message = document.getElementById('message');
-
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const subjectError = document.getElementById('subjectError');
-    const messageError = document.getElementById('messageError');
-
-    nameError.textContent = '';
-    emailError.textContent = '';
-    subjectError.textContent = '';
-    messageError.textContent = '';
-
-    // Validar Nombre
-    if (name.value.trim() === '') {
-        nameError.textContent = 'El nombre es obligatorio.';
-        valid = false;
-    } else if (name.value.trim().length > 50) {
-        nameError.textContent = 'El nombre no puede tener más de 50 caracteres.';
-        valid = false;
+    // Validación del Nombre
+    const name = document.getElementById('name').value.trim();
+    if (name === "") {
+        isValid = false;
+        document.getElementById('nameError').textContent = "Por favor, ingrese su nombre.";
+    } else {
+        document.getElementById('nameError').textContent = "";
     }
 
-    // Validar Email
+    // Validación del Correo Electrónico
+    const email = document.getElementById('email').value.trim();
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (email.value.trim() === '') {
-        emailError.textContent = 'El correo electrónico es obligatorio.';
-        valid = false;
-    } else if (!email.value.match(emailPattern)) {
-        emailError.textContent = 'Por favor, introduzca un correo electrónico válido.';
-        valid = false;
+    if (email === "") {
+        isValid = false;
+        document.getElementById('emailError').textContent = "Por favor, ingrese su correo electrónico.";
+    } else if (!email.match(emailPattern)) {
+        isValid = false;
+        document.getElementById('emailError').textContent = "Por favor, ingrese un correo electrónico válido.";
+    } else {
+        document.getElementById('emailError').textContent = "";
     }
 
-    // Validar Asunto
-    if (subject.value === '') {
-        subjectError.textContent = 'El asunto es obligatorio.';
-        valid = false;
+    // Validación del Asunto
+    const subject = document.getElementById('subject').value;
+    if (subject === "") {
+        isValid = false;
+        document.getElementById('subjectError').textContent = "Por favor, seleccione un asunto.";
+    } else {
+        document.getElementById('subjectError').textContent = "";
     }
 
-    // Validar Mensaje
-    if (message.value.trim() === '') {
-        messageError.textContent = 'El mensaje es obligatorio.';
-        valid = false;
-    } else if (message.value.trim().length > 500) {
-        messageError.textContent = 'El mensaje no puede tener más de 500 caracteres.';
-        valid = false;
+    // Validación del Mensaje
+    const message = document.getElementById('message').value.trim();
+    if (message === "") {
+        isValid = false;
+        document.getElementById('messageError').textContent = "Por favor, ingrese su mensaje.";
+    } else {
+        document.getElementById('messageError').textContent = "";
     }
 
-    if (valid) {
-        const formData = document.getElementById('formData');
-        formData.innerHTML = `
-            <h3>Datos Enviados</h3>
-            <p><strong>Nombre:</strong> ${name.value}</p>
-            <p><strong>Correo Electrónico:</strong> ${email.value}</p>
-            <p><strong>Asunto:</strong> ${subject.value}</p>
-            <p><strong>Mensaje:</strong> ${message.value}</p>
-        `;
+    // Mostrar Datos del Formulario
+    if (isValid) {
+        const formDataDiv = document.getElementById('formData');
+        formDataDiv.innerHTML = "";  // Limpiar contenido previo
 
-        // Limpiar formulario
-        name.value = '';
-        email.value = '';
-        subject.value = '';
-        message.value = '';
+        const formDataTitle = document.createElement('h3');
+        formDataTitle.textContent = "Datos del Formulario";
+        formDataDiv.appendChild(formDataTitle);
+
+        const namePara = document.createElement('p');
+        namePara.innerHTML = `<strong>Nombre:</strong> ${name}`;
+        formDataDiv.appendChild(namePara);
+
+        const emailPara = document.createElement('p');
+        emailPara.innerHTML = `<strong>Correo Electrónico:</strong> ${email}`;
+        formDataDiv.appendChild(emailPara);
+
+        const subjectPara = document.createElement('p');
+        subjectPara.innerHTML = `<strong>Asunto:</strong> ${subject}`;
+        formDataDiv.appendChild(subjectPara);
+
+        const messagePara = document.createElement('p');
+        messagePara.innerHTML = `<strong>Mensaje:</strong> ${message}`;
+        formDataDiv.appendChild(messagePara);
     }
 });
+
 
